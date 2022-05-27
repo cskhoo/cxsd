@@ -75,11 +75,12 @@ Copyright (c) 2015-2016 BusFaster Ltd
 
 To Do Additional
 ================
+Note: This version got hard coded fixes for FIXM-4.2.0.
 1. Install
 ```
 npm install
 ```
-2. Change Code and Comile it
+2. Change Code and Compile it
 ```
 npm run tsc
 ```
