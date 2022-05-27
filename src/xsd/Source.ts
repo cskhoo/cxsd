@@ -44,6 +44,15 @@ export class Source {
 				this.targetNamespace.addSource(this);
 			}
 		}
+		else {
+			// CX++ Patch when there is no namespace
+			if(!this.targetNamespace) {
+				// FIXM uses this so just patch it
+				this.targetNamespace = this.context.registerNamespace(attrTbl['xmlns:xs']);
+				this.targetNamespace.addSource(this);
+			} // end if
+			// ++CX
+		}
 
 		// Read the current file's preferred shorthand codes for other XML namespaces.
 
@@ -69,7 +78,10 @@ export class Source {
 	/** Resolve a possible relative URL in the context of this source file. */
 
 	urlResolve(urlRemote: string) {
-		return(url.resolve(this.targetNamespace.schemaUrl, urlRemote));
+		// CX++ Patch it, they used the wrong url to resolve
+		//return(url.resolve(this.targetNamespace.schemaUrl, urlRemote));
+		return(url.resolve(this.url, urlRemote));
+		// ++CX
 	}
 
 	/** Update current remote address, in case the previous address got redirected. */

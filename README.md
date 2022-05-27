@@ -72,3 +72,18 @@ License
 [The MIT License](https://raw.githubusercontent.com/charto/cxsd/master/LICENSE)
 
 Copyright (c) 2015-2016 BusFaster Ltd
+
+To Do Additional
+================
+1. Install
+```
+npm install
+```
+2. Change Code and Comile it
+```
+npm run tsc
+```
+3. Run it
+```
+npm run cxsd https://www.fixm.aero/releases/FIXM-4.2.0/schemas/core/Fixm.xsd
+```

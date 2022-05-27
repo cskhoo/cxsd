@@ -7,6 +7,7 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "cxsd": "node cxsd-cli.js",
     "typings": "typings",
     "prepublish": "typings install && tsc",
     "test": "node cxsd-cli.js --help"
